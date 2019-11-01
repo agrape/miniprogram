@@ -1,0 +1,70 @@
+/* component/card/card.wxss */
+.card-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+
+.card {
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 8rpx 16rpx 0 rgba(0,0,0,.04);
+  overflow: hidden;
+  display: block;
+}
+
+/* 缩略图 */
+.card .note-thumbnail {
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.card .note-thumbnail .thumbnail-img {
+  width: 100%;
+}
+
+/* title */
+.note-content {
+  padding: 12rpx 12rpx 0;
+  line-height: 44rpx;
+}
+.note-content .note-title {
+  font-size: 28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+
+/* info */
+.note-info {
+  padding: 12rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.note-info .note-info-author {
+  
+}
+.note-info .note-info-author .avatar-link, .note-info .note-info-author .author-name {
+  float: left;
+} 
+.note-info .note-info-author .avatar-img {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius:50rpx;
+}
+.note-info .note-info-author .author-name {
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  width: 140rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.note-info .note-info-likes {
+  line-height: 50rpx;
+
+}

@@ -1,0 +1,8 @@
+<!--component/recommend/recommend.wxml-->
+<scroll-view class="recommend-wrap" scroll-x='true'>
+  <view class="header-nav">
+    <block wx:for="{{navList}}" wx:key="index">
+      <text class="nav-item {{item.active ? 'nav-active': ''}}" data-index="{{index}}" bindtap="changeRecommend">{{item.title}}</text>
+    </block>
+  </view>
+</scroll-view>

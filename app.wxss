@@ -1,0 +1,16 @@
+/**app.wxss**/
+.container {
+  font-size: 24rpx;
+}
+.wrap {
+  padding: 0 20rpx;
+}
+.search-input {
+  color: #999999;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 2rpx solid #efefef;
+  border-radius: 30rpx;
+  text-align: center;
+  background: #efefef;
+}

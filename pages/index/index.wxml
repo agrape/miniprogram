@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="wrap">
+    <view class="search-input" bindtap="handleSearch">点击搜索</view>
+  </view>
+  <view class="recommend">
+    <recommend></recommend>
+  </view>
+  <view class="card-content">
+    <card list="{{cardList}}"></card>
+  </view>
+</view>

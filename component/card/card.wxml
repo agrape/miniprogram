@@ -1,0 +1,27 @@
+<!--component/card/card.wxml-->
+<scroll-view class="card-wrap" scroll-y='true' style="height:{{windowHeight}}px"
+bindscrolltolower="loadMoreImages">
+    <view class="card" wx:for="{{dataList}}" wx:key="index"
+    style='position: absolute; top: {{item.top}}px; left: {{item.left}}px; width: {{imgWidth}}px; height: {{item.height}}px' >
+        <view class="note-thumbnail">
+          <image class="thumbnail-img" bindload='loadImage' src="{{item.info.thumbnail}}" mode="widthFix" data-index='{{index}}' style="width: {{imgWidth}}px"></image>
+        </view>
+        <view class="note-content">
+          <text class="note-title">{{item.info.title}}</text>
+        </view>
+        <view class="note-info">
+          <view class="note-info-author">
+            <view class="avatar-link">
+              <image class="avatar-img" src="{{item.info.avatar}}"></image>
+            </view>
+            <text class="author-name">{{item.info.username}}</text>
+          </view>
+
+          <view class="note-info-likes">
+            {{item.info.liked ? "❤️" : "🖤" }}
+            <text>{{item.info.likesnum}}</text>
+          </view>
+        </view>
+    </view>
+</scroll-view>
+

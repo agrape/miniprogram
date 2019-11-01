@@ -1,0 +1,19 @@
+/* component/recommend/recommend.wxss */
+.recommend-wrap {
+  width: 100%;
+  background: #fff;
+}
+.header-nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.header-nav .nav-item {
+  font-size: 28rpx;
+  display: block;
+  padding: 20rpx;
+  color: #999;
+  white-space: nowrap;
+}
+.header-nav .nav-item.nav-active {
+  color: #333;
+}
