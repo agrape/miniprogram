@@ -1,4 +1,10 @@
 /**app.wxss**/
+button::after{
+  content: "";
+  width: 0;
+  height: 0;
+  border: none;
+}
 .container {
   font-size: 24rpx;
 }

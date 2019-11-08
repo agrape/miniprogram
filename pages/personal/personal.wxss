@@ -1,1 +1,35 @@
 /* pages/personal/personal.wxss */
+.user-avatar {
+  padding:0 20rpx;
+  display: flex;
+}
+.userinfo-avatar {
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background: #efefef;
+}
+.btn-login {
+  display: inline-block;
+  background: #fff;
+  border: none;
+  color: #999;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+  margin: 0;
+}
+.user-name {
+  display: inline-block;
+  color: #999;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+
+
+.save {
+  width: 60%;
+  margin:80rpx auto 0;
+}

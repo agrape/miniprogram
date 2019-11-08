@@ -1,0 +1,10 @@
+<!--pages/setting/setting.wxml-->
+<view>
+  <text class="center-text">定位服务未开启</text>
+  <text class="center-text">请在设置->微信->定位服务中开启[微信定位服务]</text>
+  <text class="center-text">同时在小程序中开通[定位服务]</text>
+  <text class="center-text">才能为您提供更好的服务哦～</text>
+  <button class="center-btn" open-type="openSetting" type="primary" bindopensetting="openSetting">开通小程序权限</button>
+  <button class="center-btn" open-type="" type="primary">手动搜索位置</button>
+</view>
+

@@ -1,0 +1,13 @@
+/* pages/setting/setting.wxss */
+.center-text {
+  text-align: center;
+  display: block;
+  color: #666;
+  font-size:24rpx;
+  line-height: 48rpx;
+}
+.center-btn {
+  width: 70%;
+  font-size: 28rpx;
+  margin: 60rpx auto; 
+}

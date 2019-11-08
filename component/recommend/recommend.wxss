@@ -17,3 +17,6 @@
 .header-nav .nav-item.nav-active {
   color: #333;
 }
+.location {
+  padding-left: 20rpx;
+}

@@ -1,11 +1,16 @@
 <!--pages/shoppingMall/shoppingMall.wxml-->
-<scroll-view class='main' scroll-y='true' style="height:{{windowHeight}}px" bindscrolltolower='loadMoreImages'>
-    <image 
-      wx:for='{{dataList}}' 
-      wx:key='item' 
-      src='{{item.src}}' 
-      style='position: absolute; top: {{item.top}}px; left: {{item.left}}px; width: {{imgWidth}}px; height: {{item.height}}px' 
-      bindload='loadImage' 
-      data-index='{{index}}' 
-      bindtap='previewImg'/>
-</scroll-view>
+<view>
+  <view wx:if="{{giftStatus}}" animation="{{animation}}"  class="gift-box">
+    <view>
+      <image class="gift-img" mode="widthFix" src="/static/images/gift.jpg"></image>
+    </view>
+    <text class="gift-desc">恭喜你，被礼物砸中了！</text>
+    <view class="gift-btn" bindtap="saveImage">接收礼物</view>
+  </view>
+</view>
+
+<view>
+  <canvas canvas-id='canvas' class='canvas'/>
+  <view class="gift-btn" bindtap="saveCanvas">接收礼物</view>
+</view>
+

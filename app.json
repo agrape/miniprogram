@@ -5,8 +5,15 @@
     "pages/shoppingMall/shoppingMall",
     "pages/personal/personal",
     "pages/home/index",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/setting/setting",
+    "pages/waterfall/waterfall"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取附近精彩作品哦"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -15,18 +22,25 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "selectedColor": "#db639b",
     "list": [
       {
         "pagePath": "pages/shoppingMall/shoppingMall",
-        "text": "商城"
+        "text": "商城",
+        "iconPath": "/static/images/icon/shoppingmall.png",
+        "selectedIconPath": "/static/images/icon/shoppingmall_active.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "/static/images/icon/home.png",
+        "selectedIconPath": "/static/images/icon/home_active.png"
       },
       {
         "pagePath": "pages/personal/personal",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "/static/images/icon/info.png",
+        "selectedIconPath": "/static/images/icon/info_active.png"
       }
     ]
   }

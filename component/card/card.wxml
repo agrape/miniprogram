@@ -1,10 +1,12 @@
 <!--component/card/card.wxml-->
-<scroll-view class="card-wrap" scroll-y='true' style="height:{{windowHeight}}px"
+<view>
+
+<scroll-view class="card-wrap" scroll-y='true' style="height:{{scrollHeight}}rpx"
 bindscrolltolower="loadMoreImages">
     <view class="card" wx:for="{{dataList}}" wx:key="index"
     style='position: absolute; top: {{item.top}}px; left: {{item.left}}px; width: {{imgWidth}}px; height: {{item.height}}px' >
         <view class="note-thumbnail">
-          <image class="thumbnail-img" bindload='loadImage' src="{{item.info.thumbnail}}" mode="widthFix" data-index='{{index}}' style="width: {{imgWidth}}px"></image>
+          <image class="thumbnail-img" bindload='loadImage' src="{{item.info.thumbnail}}" mode="widthFix" data-index='{{index}}' bindtap="previewImg" style="width: {{imgWidth}}px"></image>
         </view>
         <view class="note-content">
           <text class="note-title">{{item.info.title}}</text>
@@ -24,4 +26,5 @@ bindscrolltolower="loadMoreImages">
         </view>
     </view>
 </scroll-view>
+</view>
 

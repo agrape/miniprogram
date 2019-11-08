@@ -2,7 +2,11 @@
 <scroll-view class="recommend-wrap" scroll-x='true'>
   <view class="header-nav">
     <block wx:for="{{navList}}" wx:key="index">
-      <text class="nav-item {{item.active ? 'nav-active': ''}}" data-index="{{index}}" bindtap="changeRecommend">{{item.title}}</text>
+      <text class="nav-item {{item.active ? 'nav-active': ''}}" data-index="{{index}}" data-type="{{item.type}}" bindtap="changeRecommend">{{item.title}}</text>
     </block>
   </view>
 </scroll-view>
+<view class="location">
+  <text wx:if="{{isNearby && !hasLocation}}">还不知道您当前的位置哦😯</text>
+  <text wx:if="{{isNearby && hasLocation}}">您当前所在的位置：{{locationInfo.latitude}} -- {{locationInfo.longitude}}</text>
+</view>

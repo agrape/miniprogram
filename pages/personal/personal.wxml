@@ -1,2 +1,13 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class="user-avatar">
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <button wx:if="{{!hasUserInfo}}" class="btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+  <text wx:else class="user-name">{{userInfo.nickName}}</text>
+</view>
+
+<view class="save">
+  <button bindtap="createPoster">分享给朋友</button>
+</view>
+
+<view>
+</view>

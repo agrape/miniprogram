@@ -1,4 +1,5 @@
 // component/card/card.js
+
 Component({
   /**
    * 组件的属性列表
@@ -19,6 +20,7 @@ Component({
     imgMargin: 10, //图片边距: 单位px
     imgWidth: 0,  //图片宽度: 单位px
     topArr: [0, 0], //存储每列的累积top
+    scrollHeight: 0
   },
   /**
    * 组件生命周期
@@ -33,7 +35,6 @@ Component({
       //获取页面宽高度
       wx.getSystemInfo({
         success: function (res) {
-          console.log(res)
 
           let windowWidth = res.windowWidth;
           let imgMargin = that.data.imgMargin;
@@ -43,6 +44,7 @@ Component({
           that.setData({
             windowWidth: windowWidth,
             windowHeight: res.windowHeight,
+            scrollHeight: res.windowHeight * 2 - 134,
             imgWidth: imgWidth
           }, function () {
             that.loadMoreImages(); //初始化数据
@@ -112,5 +114,12 @@ Component({
         wx.showToast({ title: '没有更多数据了', icon: 'none'})
       }
     },
+    previewImg (e) {
+      let src = this.data.dataList[e.currentTarget.dataset.index].info.avatar
+      // urls的链接是 http链接
+      wx.previewImage({
+        urls: ['https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=400545645,1325440240&fm=26&gp=0.jpg']
+      })
+    }
   }
 })

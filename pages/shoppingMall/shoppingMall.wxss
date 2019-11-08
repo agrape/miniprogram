@@ -1,5 +1,38 @@
 /* pages/shoppingMall/shoppingMall.wxss */
-.main{ width: 100%; height: 100%; position: relative; }
-.main image {
-  box-shadow: 0 0 10rpx red; border-radius: 8rpx;
+.gift-box {
+  width: 100%;
+  font-size: 10rpx;
+  position: absolute;
+  bottom:0;
+  margin: 0 auto;
+  text-align: center;
+}
+.gift-box .gift-img{
+  width: 200rpx;
+  display: block;
+  margin: 0 auto;
+}
+.gift-box .gift-desc{
+  width: 100%;
+  display: block;
+  padding-top: 20rpx;
+}
+.gift-btn {
+  font-size: 28rpx;
+  color: #db639b;
+  position: fixed;
+  bottom: 70rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.canvas {
+  width: 500rpx;
+  height: 800rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }

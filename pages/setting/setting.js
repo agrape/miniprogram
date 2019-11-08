@@ -1,22 +1,24 @@
-// pages/index/index.js
-var cardInfo = require('./cardInfo')
+// pages/setting/setting.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cardList: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      cardList: cardInfo.default.result
+    console.log('加载')
+    wx.openSetting({
+      success: (res) => {
+        console.log(888)
+       }
     })
-    
   },
 
   /**
@@ -31,6 +33,23 @@ Page({
    */
   onShow: function () {
 
+  },
+  openSetting(e) {
+    console.log(e)
+    if (e.detail.authSetting['scope.userLocation']) {
+      wx.getLocation({
+        type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+        success(res) {
+          const latitude = res.latitude
+          const longitude = res.longitude
+          app.globalData.locationInfo = {
+            latitude,
+            longitude
+          }
+          wx.switchTab({ url: '/pages/index/index'})
+        },
+      })
+    }
   },
 
   /**
@@ -64,18 +83,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function (obj) {
-    console.log(obj)
-    return {
-      title: '我的国潮时尚',
-      path: '/pages/index/index',
-      imageUrl: '/static/images/thumbnail5.jpeg'
-    }
-  },
-  /**
-   * 点击搜索框
-   */
-  handleSearch () {
-    wx.navigateTo({url: '/pages/search/search'})
+  onShareAppMessage: function () {
+
   }
 })
